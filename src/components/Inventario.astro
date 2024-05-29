@@ -1,0 +1,87 @@
+---
+import Card from "./Card.astro"
+---
+<section class="w-full py-12 px-4 bg-white dark:bg-gray-900 overflow-hidden">
+          <div class="w-full max-w-7xl mx-auto">
+            <!--Section title-->
+            <div class="w-full max-w-lg mx-auto text-center space-y-4 py-6">
+              <!--Badge-->
+              <span class="
+                  inline-block
+                  font-sans
+                  text-xs
+                  py-1.5
+                  px-3
+                  m-1 rounded-full
+                  text-primary-500
+                  bg-sky-800 text-white
+                ">
+                Nuestro Catalogo
+              </span>
+              <!--Title-->
+              <h2 class="
+                  font-heading font-light
+                  text-4xl
+                  md:text-5xl
+                  text-gray-800
+                  dark:text-white
+                ">
+                Inventario
+              </h2>
+              <!--Subtitle-->
+              <p class="font-sans font-light text-lg text-gray-500 dark:text-gray-400">
+                Nuestro Inventario cuenta con gran variedad de autos, camionetas, furgones y motos. Nuevos y semi nuevos.
+              </p>
+            </div>
+        
+            <div class="
+                relative
+                w-full
+                max-w-6xl
+                mx-auto
+                grid
+                ptablet:grid-cols-2
+                ltablet:grid-cols-3
+                lg:grid-cols-3
+                gap-16
+                ptablet:gap-14
+                ltablet:gap-14
+                lg:gap-20
+                py-6
+              ">
+                <Card nombre="Toyota Corolla Hibrido" marca="toyota" img="corolla.png" precio="18000" d1="20.000" d2="1.5" d3="2017"/>
+                <Card nombre="Kia Sportage 2023" marca="kia" img="sportage.png" precio="46000" d1="0" d2="2.0" d3="2023"/>
+                <Card nombre="Mitsubishi L200" marca="mitsubishi" img="l200.png" precio="28000" d1="45.000" d2="2.2" d3="2015"/>
+            </div>
+
+            <div class="flex items-center justify-center py-10">
+              <a href="/tienda" class="
+                  relative
+                  font-sans font-normal
+                  inline-flex
+                  items-center
+                  justify-center
+                  leading-5
+                  no-underline
+                  min-w-[240px]
+                  space-x-1
+                  text-white
+                  bg-gray-800
+                  dark:bg-gray-800
+                  h-14
+                  px-5
+                  py-3
+                  text-base
+                  hover:bg-gray-700
+                  dark:hover:bg-gray-1000
+                  tw-accessibility
+                  transition-all
+                  duration-300
+                ">
+                Ver Catalogo
+              </a>
+            </div>
+          </div>
+        </section>
+
+        

@@ -1,0 +1,125 @@
+---
+interface Props {
+	nombre: string;
+	descripcion: string;
+}
+
+const { nombre, descripcion} = Astro.props;
+---
+  <div class="
+            flex
+            flex-col
+            md:flex-row
+            border border-gray-800
+             bg-slate-900
+          ">
+          <div class="
+              ptablet:w-1/2
+              ltablet:w-3/5
+              lg:w-3/5
+              flex
+              items-center
+              p-8
+              border-b md:border-r border-gray-800
+            ">
+            <div>
+              <div>
+                <h3 class="font-sans font-light text-3xl text-white">{nombre}</h3>
+                <p class="font-sans ttext-gray-400">{descripcion}</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="ptablet:w-1/2 ltablet:w-2/5 lg:w-2/5 p-8">
+            <div class="h-full flex flex-col">
+            
+              <div class="mt-auto">
+                <form class="space-y-2">
+                  <div class="relative">
+                    <div class="group relative">
+                      <input type="number" name="number" class="
+                          pl-10
+                          pr-3
+                          py-2
+                          h-10
+                          text-sm
+                          leading-5
+                          font-sans
+                          w-full
+                          bg-white
+                          text-gray-600
+                          border border-muted-300
+                          focus-visible:border-muted-300
+                          focus-visible:shadow-lg
+                          focus-visible:shadow-muted-300/50
+                          dark:focus-visible:shadow-muted-800/50
+                          placeholder:text-muted-300
+                          dark:placeholder:text-muted-500
+                          dark:bg-muted-700
+                          dark:text-muted-200
+                          dark:border-muted-600
+                          dark:focus-visible:border-muted-600
+                          focus-visible:ring-0
+                          outline-transparent
+                          focus-visible:outline-2
+                          focus-visible:outline-dashed
+                          focus-visible:outline-muted-300
+                          dark:focus-visible:outline-muted-600
+                          focus-visible:outline-offset-2
+                          transition-all
+                          duration-300
+                        " placeholder="Numero de Telefono">
+                      <div class="
+                          absolute
+                          top-0
+                          left-0
+                          h-10
+                          w-10
+                          flex
+                          justify-center
+                          items-center
+                          text-muted-400
+                          group-focus-within:text-primary-500
+                          transition-colors
+                          duration-300
+                        ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone text-black" viewBox="0 0 16 16">
+                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                          </svg>
+                    </div>
+                    </div>
+                  </div>
+                  <input type="text" name="servicio" value=`${nombre}` hidden>
+                  <button type="submit" class="
+                      relative
+                      font-sans font-normal
+                      inline-flex
+                      items-center
+                      justify-center
+                      leading-5
+                      no-underline
+                      mt-6
+                      w-full
+                      space-x-1
+                      text-white
+                      bg-sky-800
+                      dark:bg-primary-600
+                      h-10
+                      px-5
+                      py-3
+                      text-base
+                      hover:bg-muted-700
+                      dark:hover:bg-primary-500
+                      hover:shadow-xl hover:shadow-muted-300/20
+                      dark:hover:shadow-primary-600/20
+                      tw-accessibility
+                      transition-all
+                      duration-300
+                    ">
+                    Me interesa
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>

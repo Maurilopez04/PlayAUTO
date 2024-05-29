@@ -1,0 +1,12 @@
+/* global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scale-100 {
+  transform: scale(1);
+}
+
+.scale-110 {
+  transform: scale(1.1);
+}
