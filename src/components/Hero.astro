@@ -1,7 +1,13 @@
----
----
+<head>
+  <style>
+    .scale-100 { transform: scale(1); }
+    .scale-110 { transform: scale(1.1); }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script type="module" defer>
 
-<section x-data="{
+document.addEventListener('alpine:init', () => {
+  Alpine.data('imageSlider', () => ({
     images: ['/playauto/images/hero1.jpg', '/playauto/images/hero2.webp'],
     currentImageIndex: 0,
     animationClass: 'scale-100',
@@ -11,15 +17,22 @@
         this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
         this.animationClass = 'scale-100';
       }, 1000);
+    },
+    init() {
+      setInterval(() => this.changeImage(), 3000);
     }
-  }"
-  x-init="setInterval(() => changeImage(), 3000)"
-  class="relative h-screen text-white overflow-hidden">
+  }));
+});
+</script>
+</head>
+
+<section x-data="imageSlider" class="relative h-screen text-white overflow-hidden">
   <div :class="animationClass" :style="{ backgroundImage: 'url(' + images[currentImageIndex] + ')' }" class="absolute inset-0 bg-cover bg-center transition-transform duration-1000"></div>
   <div class="absolute inset-0 bg-black opacity-50"></div>
   <div class="relative container mx-auto flex flex-col items-center justify-center h-full text-center">
     <h1 class="text-5xl md:text-7xl font-bold mb-4">Descubre Tu Próximo Auto</h1>
     <p class="text-lg md:text-2xl mb-8">Encuentra los mejores vehículos al mejor precio</p>
-    <a href="/playauto/tienda" class="bg-sky-800 hover:bg-sky-900 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition-transform"> Ir a Catalogo</a>
+    <a href="/playauto/tienda" class="bg-sky-800 hover:bg-sky-900 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition-transform">Ir a Catalogo</a>
   </div>
 </section>
+

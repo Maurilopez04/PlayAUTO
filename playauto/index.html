@@ -1,0 +1,573 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Astro description"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/playauto/Transports Gradient auto parts logo 8.webp"><meta name="generator" content="Astro v4.9.2"><script src="https://kit.fontawesome.com/b3949f38f5.js" crossorigin="anonymous"></script><script src="https://cdn.tailwindcss.com" defer></script><title>Playa de autos</title><style>.scale-100[data-astro-cid-bbe6dxrz]{transform:scale(1)}.scale-110[data-astro-cid-bbe6dxrz]{transform:scale(1.1)}
+</style><script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("nav-toggle"),t=document.getElementById("nav-content"),n=document.getElementById("header");e&&t&&n&&(window.addEventListener("scroll",function(){const s=window.scrollY>20||!t.classList.contains("hidden");n.classList.toggle("bg-[#13151a]",s),n.classList.toggle("bg-transparent",!s)}),e.addEventListener("click",function(){t.classList.toggle("hidden"),n.classList.toggle("bg-[#13151a]",!t.classList.contains("hidden")),n.classList.toggle("bg-transparent",t.classList.contains("hidden"))}))});
+</script></head> <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col justify-between"> <header id="header" class="fixed w-full z-30 top-0 text-white py-0 transition duration-300 ease-in-out"> <div class="container mx-auto flex flex-wrap items-center justify-between mt-0 py-1 pb-2 px-4"> <div class="flex items-center"> <a class="text-white no-underline hover:no-underline font-bold text-3xl lg:text-4xl flex" href="/playauto/">
+Logo </a> </div> <div class="block lg:hidden"> <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white"> <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menú</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg> </button> </div> <nav class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden pt-6 lg:pt-0" id="nav-content"> <ul class="list-reset lg:flex justify-end flex-1 items-center lg:text-lg xl:text-xl"> <li class="mr-3"> <a class="inline-block py-2 px-4 text-white no-underline" href="/playauto/">Inicio</a> </li> <li class="mr-3"> <a class="inline-block py-2 px-4 text-white no-underline" href="/playauto/servicios">Servicios</a> </li> <li class="mr-3"> <a class="inline-block py-2 px-4 text-white no-underline" href="/playauto/tienda">Tienda</a> </li> <li class="mr-3"> <a class="inline-block py-2 px-4 text-white no-underline" href="/playauto/contacto">Contacto</a> </li> </ul> </nav> </div> </header>   <head><script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script><script type="module" defer>
+
+document.addEventListener('alpine:init', () => {
+  Alpine.data('imageSlider', () => ({
+    images: ['/playauto/images/hero1.jpg', '/playauto/images/hero2.webp'],
+    currentImageIndex: 0,
+    animationClass: 'scale-100',
+    changeImage() {
+      this.animationClass = 'scale-110';
+      setTimeout(() => {
+        this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
+        this.animationClass = 'scale-100';
+      }, 1000);
+    },
+    init() {
+      setInterval(() => this.changeImage(), 3000);
+    }
+  }));
+});
+</script></head> <section x-data="imageSlider" class="relative h-screen text-white overflow-hidden" data-astro-cid-bbe6dxrz> <div :class="animationClass" :style="{ backgroundImage: 'url(' + images[currentImageIndex] + ')' }" class="absolute inset-0 bg-cover bg-center transition-transform duration-1000" data-astro-cid-bbe6dxrz></div> <div class="absolute inset-0 bg-black opacity-50" data-astro-cid-bbe6dxrz></div> <div class="relative container mx-auto flex flex-col items-center justify-center h-full text-center" data-astro-cid-bbe6dxrz> <h1 class="text-5xl md:text-7xl font-bold mb-4" data-astro-cid-bbe6dxrz>Descubre Tu Próximo Auto</h1> <p class="text-lg md:text-2xl mb-8" data-astro-cid-bbe6dxrz>Encuentra los mejores vehículos al mejor precio</p> <a href="/playauto/tienda" class="bg-sky-800 hover:bg-sky-900 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition-transform" data-astro-cid-bbe6dxrz>Ir a Catalogo</a> </div> </section> <section class="w-full py-12 px-4 bg-gray-900 overflow-hidden"> <div class="w-full max-w-7xl mx-auto"> <div class="w-full max-w-lg mx-auto text-center space-y-4 py-6"> <span class="
+                  inline-block
+                  font-sans
+                  text-xs
+                  py-1.5
+                  px-3
+                  m-1 rounded-full
+                  text-primary-500
+                  bg-sky-800 text-white
+                ">
+Nuestro Catalogo
+</span> <h2 class="
+                  font-heading font-light
+                  text-4xl
+                  md:text-5xl
+                  text-white
+                ">
+Inventario
+</h2> <p class="font-sans font-light text-lg text-gray-400">
+Nuestro Inventario cuenta con gran variedad de autos, camionetas, furgones y motos. Nuevos y semi nuevos.
+</p> </div> <div class="
+                relative
+                w-full
+                max-w-6xl
+                mx-auto
+                grid
+                ptablet:grid-cols-2
+                ltablet:grid-cols-3
+                lg:grid-cols-3
+                gap-16
+                ptablet:gap-14
+                ltablet:gap-14
+                lg:gap-20
+                py-6
+              "> <div class="relative group"> <div class="flex items-center gap-4 mb-4"> <div class="
+		  h-10
+		  w-10
+		  min-w-[2.5rem]
+		  flex
+		  items-center
+		  justify-center
+		  text-gray-200
+		"> <img src="https://simpleicons.org/icons/toyota.svg" alt="toyota Icon" class=" filter invert"> </div> <div class="leading-tight"> <h3 class="
+			font-sans font-semibold
+			text-lg text-gray-50 md:h-14 lg:h-auto
+		  "> Toyota Corolla Hibrido </h3> <p class="font-sans text-xs text-gray-400">
+Disponible en el local
+</p> </div> <div class="ml-auto"> <span class="
+			font-sans font-semibold
+			text-lg text-gray-50
+		  ">
+$18000 </span> </div> </div> <div class="relative lg:h-48 p-4 bg-gray-800/80 group-hover:bg-sky-900 transition-colors duration-300"> <img class="h-auto w-full" src="/playauto/images/corolla.png" alt="Vehicle image"> </div> <div class="
+		w-full
+		flex
+		mt-6
+		mb-4
+		divide-x divide-gray-800 sm:h-14
+	  "> <div class="flex-1 flex items-center justify-center px-4"> <div class="text-center"> <span class="
+			  block
+			  font-sans font-semibold
+			 text-gray-50
+			"> 20.000 <small class="font-normal text-gray-400">
+KM
+</small> </span> <small class="block font-sans text-gray-400">
+Estado
+</small> </div> </div> <div class="flex-1 flex items-center justify-center px-4"> <div class="text-center"> <span class="
+			  block
+			  font-sans font-semibold
+			  text-gray-50
+			"> 1.5 <small class="font-normal text-gray-400"></small> </span> <small class="block font-sans text-gray-400">
+Motor
+</small> </div> </div> <div class="flex-1 flex items-center justify-center px-4"> <div class="text-center"> <span class="
+			  block
+			  font-sans font-semibold
+			  text-gray-50
+			"> 2017 <small class="font-normal text-gray-400"></small> </span> <small class="block font-sans text-gray-400">
+Año
+</small> </div> </div> </div> <a href="/playauto/vehiculo" class="
+		relative
+		font-sans font-normal
+		inline-flex
+		items-center
+		justify-center
+		leading-5
+		no-underline
+		w-full
+		space-x-1
+		bg-gray-800
+		hover:bg-gray-700
+		text-gray-100
+		h-10
+		px-5
+		py-3
+		text-sm
+		tw-accessibility
+		transition-all
+		duration-300
+	  ">
+Ver Detalles
+</a> </div> <div class="relative group"> <div class="flex items-center gap-4 mb-4"> <div class="
+		  h-10
+		  w-10
+		  min-w-[2.5rem]
+		  flex
+		  items-center
+		  justify-center
+		  text-gray-200
+		"> <img src="https://simpleicons.org/icons/kia.svg" alt="kia Icon" class=" filter invert"> </div> <div class="leading-tight"> <h3 class="
+			font-sans font-semibold
+			text-lg text-gray-50 md:h-14 lg:h-auto
+		  "> Kia Sportage 2023 </h3> <p class="font-sans text-xs text-gray-400">
+Disponible en el local
+</p> </div> <div class="ml-auto"> <span class="
+			font-sans font-semibold
+			text-lg text-gray-50
+		  ">
+$46000 </span> </div> </div> <div class="relative lg:h-48 p-4 bg-gray-800/80 group-hover:bg-sky-900 transition-colors duration-300"> <img class="h-auto w-full" src="/playauto/images/sportage.png" alt="Vehicle image"> </div> <div class="
+		w-full
+		flex
+		mt-6
+		mb-4
+		divide-x divide-gray-800 sm:h-14
+	  "> <div class="flex-1 flex items-center justify-center px-4"> <div class="text-center"> <span class="
+			  block
+			  font-sans font-semibold
+			 text-gray-50
+			"> 0 <small class="font-normal text-gray-400">
+KM
+</small> </span> <small class="block font-sans text-gray-400">
+Estado
+</small> </div> </div> <div class="flex-1 flex items-center justify-center px-4"> <div class="text-center"> <span class="
+			  block
+			  font-sans font-semibold
+			  text-gray-50
+			"> 2.0 <small class="font-normal text-gray-400"></small> </span> <small class="block font-sans text-gray-400">
+Motor
+</small> </div> </div> <div class="flex-1 flex items-center justify-center px-4"> <div class="text-center"> <span class="
+			  block
+			  font-sans font-semibold
+			  text-gray-50
+			"> 2023 <small class="font-normal text-gray-400"></small> </span> <small class="block font-sans text-gray-400">
+Año
+</small> </div> </div> </div> <a href="/playauto/vehiculo" class="
+		relative
+		font-sans font-normal
+		inline-flex
+		items-center
+		justify-center
+		leading-5
+		no-underline
+		w-full
+		space-x-1
+		bg-gray-800
+		hover:bg-gray-700
+		text-gray-100
+		h-10
+		px-5
+		py-3
+		text-sm
+		tw-accessibility
+		transition-all
+		duration-300
+	  ">
+Ver Detalles
+</a> </div> <div class="relative group"> <div class="flex items-center gap-4 mb-4"> <div class="
+		  h-10
+		  w-10
+		  min-w-[2.5rem]
+		  flex
+		  items-center
+		  justify-center
+		  text-gray-200
+		"> <img src="https://simpleicons.org/icons/mitsubishi.svg" alt="mitsubishi Icon" class=" filter invert"> </div> <div class="leading-tight"> <h3 class="
+			font-sans font-semibold
+			text-lg text-gray-50 md:h-14 lg:h-auto
+		  "> Mitsubishi L200 </h3> <p class="font-sans text-xs text-gray-400">
+Disponible en el local
+</p> </div> <div class="ml-auto"> <span class="
+			font-sans font-semibold
+			text-lg text-gray-50
+		  ">
+$28000 </span> </div> </div> <div class="relative lg:h-48 p-4 bg-gray-800/80 group-hover:bg-sky-900 transition-colors duration-300"> <img class="h-auto w-full" src="/playauto/images/l200.png" alt="Vehicle image"> </div> <div class="
+		w-full
+		flex
+		mt-6
+		mb-4
+		divide-x divide-gray-800 sm:h-14
+	  "> <div class="flex-1 flex items-center justify-center px-4"> <div class="text-center"> <span class="
+			  block
+			  font-sans font-semibold
+			 text-gray-50
+			"> 45.000 <small class="font-normal text-gray-400">
+KM
+</small> </span> <small class="block font-sans text-gray-400">
+Estado
+</small> </div> </div> <div class="flex-1 flex items-center justify-center px-4"> <div class="text-center"> <span class="
+			  block
+			  font-sans font-semibold
+			  text-gray-50
+			"> 2.2 <small class="font-normal text-gray-400"></small> </span> <small class="block font-sans text-gray-400">
+Motor
+</small> </div> </div> <div class="flex-1 flex items-center justify-center px-4"> <div class="text-center"> <span class="
+			  block
+			  font-sans font-semibold
+			  text-gray-50
+			"> 2015 <small class="font-normal text-gray-400"></small> </span> <small class="block font-sans text-gray-400">
+Año
+</small> </div> </div> </div> <a href="/playauto/vehiculo" class="
+		relative
+		font-sans font-normal
+		inline-flex
+		items-center
+		justify-center
+		leading-5
+		no-underline
+		w-full
+		space-x-1
+		bg-gray-800
+		hover:bg-gray-700
+		text-gray-100
+		h-10
+		px-5
+		py-3
+		text-sm
+		tw-accessibility
+		transition-all
+		duration-300
+	  ">
+Ver Detalles
+</a> </div> </div> <div class="flex items-center justify-center py-10"> <a href="/playauto/tienda" class="
+                  relative
+                  font-sans font-normal
+                  inline-flex
+                  items-center
+                  justify-center
+                  leading-5
+                  no-underline
+                  min-w-[240px]
+                  space-x-1
+                  text-white
+                  bg-gray-800
+                  h-14
+                  px-5
+                  py-3
+                  text-base
+                  hover:bg-gray-1000
+                  tw-accessibility
+                  transition-all
+                  duration-300
+                ">
+Ver Catalogo
+</a> </div> </div> </section> <section class=" bg-[#111840] pt-10"> <h2 class="text-white text-center text-3xl font-bold">Nuestras Marcas</h2> <div class="max-w-screen-xl px-4 pt-10 pb-8 mx-auto lg:pb-16"> <div class="grid grid-cols-2 justify-center gap-8 text-gray-500 sm:gap-12 sm:grid-cols-4 lg:grid-cols-6"> <a href="#" class="flex items-center justify-center"> <img src="https://simpleicons.org/icons/toyota.svg" alt="Logo Toyota" class="h-24 filter invert"> </a> <a href="#" class="flex items-center justify-center"> <img src="https://simpleicons.org/icons/nissan.svg" alt="Logo Toyota" class="h-24 filter invert"> </a> <a href="#" class="flex items-center justify-center"> <img src="https://simpleicons.org/icons/hyundai.svg" alt="Logo Toyota" class="h-24 filter invert"> </a> <a href="#" class="flex items-center justify-center"> <img src="https://simpleicons.org/icons/kia.svg" alt="Logo Toyota" class="h-24 filter invert"> </a> <a href="#" class="flex items-center justify-center"> <img src="https://simpleicons.org/icons/mitsubishi.svg" alt="Logo Toyota" class="h-24 filter invert"> </a> <a href="#" class="flex items-center justify-center"> <img src="https://simpleicons.org/icons/mercedes.svg" alt="Logo Toyota" class="h-24 filter invert"> </a> </div> </div> </section> <div class="w-full max-w-lg mx-auto text-center space-y-4 pt-12 pb-2"> <span class="
+    inline-block
+    font-sans
+    text-xs
+    py-1.5
+    px-3
+    m-1 rounded-full
+    bg-sky-800 text-white
+    ">
+Nuestro Mejor Auto
+</span> <h2 class="
+        font-heading
+        text-3xl
+        md:text-4xl
+        font-bold
+        text-white
+      ">
+Mejor Vehiculo
+</h2> </div> <div class="group w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 py-8"> <div class="flex items-center justify-center"> <div class="w-full max-w-sm mx-auto"> <div class="flex items-center gap-4 mb-8"> <div class="
+              h-10
+              w-10
+              min-w-[2.5rem]
+              flex
+              items-center
+              justify-center
+              text-gray-200
+            "> <div class="
+            h-10
+            w-10
+            min-w-[2.5rem]
+            flex
+            items-center
+            justify-center
+            text-gray-200
+          "> <img src="https://simpleicons.org/icons/mercedes.svg" alt="Mercedes Logo" class="filter invert"> </div> </div> <div class="leading-tight"> <h3 class="
+                font-sans font-semibold
+                text-lg text-gray-50
+              ">
+Mercedes-Benz AMG GT Car
+</h3> <p class="font-sans text-xs text-gray-400">
+Disponible en el local
+</p> </div> <div class="ml-auto"> <span class="
+                font-sans font-semibold
+                text-xl text-gray-50
+              ">
+$64,000
+</span> </div> </div> <div class="font-sans text-sm text-gray-400"> <p>
+Nuevo modelo base que utiliza una versión desafinada del V-8 biturbo existente, un nuevo paquete aerodinámico AMG y los neumáticos R03 Cup ahora se pueden pedir con el paquete AMG Dynamic Plus.
+</p> </div> <div class="
+            w-full
+            flex
+            mt-8
+            mb-4
+            divide-x divide-gray-800
+          "> <div class="flex-1 flex items-center justify-center px-4"> <div class="text-center"> <span class="
+                  block
+                  font-sans font-semibold
+                  text-gray-50
+                ">
+10.000
+<small class="font-normal text-gray-400">
+KM
+</small> </span> <small class="block font-sans text-gray-400">
+Estado
+</small> </div> </div> <div class="flex-1 flex items-center justify-center px-4"> <div class="text-center"> <span class="
+                  block
+                  font-sans font-semibold
+                  text-gray-50
+                ">
+4.0
+</span> <small class="block font-sans text-gray-400">
+Motor
+</small> </div> </div> <div class="flex-1 flex items-center justify-center px-4"> <div class="text-center"> <span class="
+                  block
+                  font-sans font-semibold
+                  text-gray-50
+                ">
+2017
+</span> <small class="block font-sans text-gray-400">
+Año
+</small> </div> </div> </div> <a href="/playauto/vehiculo" class="
+            relative
+            font-sans font-normal
+            inline-flex
+            items-center
+            justify-center
+            leading-5
+            no-underline
+            w-full
+            space-x-1
+            bg-gray-800
+            hover:bg-gray-700
+            text-gray-300
+            hover:text-white
+            h-10
+            px-5
+            py-3
+            text-sm
+            tw-accessibility
+            transition-all
+            duration-300
+          ">
+Ver Detalles
+</a> </div> </div> <div class="relative h-64 md:h-96 p-4 bg-gray-800/80 group-hover:bg-sky-900 transition-colors duration-300"> <img class="absolute bottom-4 right-4 object-contain w-full" src="/playauto/images/mercedes.png"> </div> </div> <section class="text-gray-600 body-font relative"> <div class="sm:absolute sm:inset-0 h-96 sm:h-auto bg-gray-300"> <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62083.55566420132!2d-57.518678800695724!3d-25.37135790888753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945dad5b26b273fb%3A0xdceba1bc7c0fc7ad!2sPLAYA!5e0!3m2!1ses!2spy!4v1716133338211!5m2!1ses!2spy" style=""></iframe> </div> <div class="container px-5 sm:py-24 mx-auto flex"> <div class="lg:w-1/3 md:w-1/2 bg-gray-900 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md"> <h2 class="text-gray-100 text-lg mb-1 font-medium title-font">Contacto</h2> <p class="leading-relaxed mb-5 text-gray-300">Dejanos tu mensaje y nos pondremos en contacto contigo.</p> <div class="relative mb-4"> <label for="email" class="leading-7 text-sm text-gray-200">Email</label> <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-sky-800 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"> </div> <div class="relative mb-4"> <label for="email" class="leading-7 text-sm text-gray-200">Numero</label> <input type="number" id="number" name="number" class="w-full bg-white rounded border border-gray-300 focus:border-sky-800 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"> </div> <div class="relative mb-4"> <label for="message" class="leading-7 text-sm text-gray-200">Mensaje</label> <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-sky-800 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-300 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea> </div> <button class="text-white bg-sky-800 border-0 py-2 px-6 focus:outline-none hover:bg-sky-900 rounded text-lg">Enviar</button> </div> </div> </section>  <div class="relative w-full px-5 py-24 z-30 bg-[#121730] mt-full"> <div class="max-w-7xl mx-auto flex flex-wrap md:text-left text-center"> <div class="lg:w-1/4 md:w-1/2 w-full px-4"> <h2 class="
+            font-sans font-medium
+            text-muted-100
+            tracking-widest
+            text-sm
+            uppercase
+            mb-4
+          ">
+Comprar Vehiculos
+</h2> <ul class="font-sans space-y-2 mb-10"> <li> <a href="/playauto/tienda" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Inventario
+</a> </li> <li> <a href="/playauto/tienda" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Vehiculos Nuevos
+</a> </li> <li> <a href="/playauto/tienda" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Vehiculos Usados
+</a> </li> <li> <a href="/playauto/tienda" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Todos los modelos
+</a> </li> <li> <a href="/playauto/tienda" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Comprar online
+</a> </li> </ul> </div> <div class="lg:w-1/4 md:w-1/2 w-full px-4"> <h2 class="
+            font-sans font-medium
+            text-muted-100
+            tracking-widest
+            text-sm
+            uppercase
+            mb-4
+          ">
+Servicios
+</h2> <ul class="font-sans space-y-2 mb-10"> <li> <a href="/playauto/servicios" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Mecanica General
+</a> </li> <li> <a href="/playauto/servicios" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Chaperia y pintura
+</a> </li> <li> <a href="/playauto/servicios" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Limpieza del vehiculo
+</a> </li> <li> <a href="/playauto/servicios" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Equipamientos
+</a> </li> <li> <a href="/playauto/servicios" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Tratamiento Ceramico
+</a> </li> </ul> </div> <div class="lg:w-1/4 md:w-1/2 w-full px-4"> <h2 class="
+            font-sans font-medium
+            text-muted-100
+            tracking-widest
+            text-sm
+            uppercase
+            mb-4
+          ">
+Compañia
+</h2> <ul class="font-sans space-y-2 mb-10"> <li> <a href="/playauto/nosotros" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Sobre nosotros
+</a> </li> <li> <a href="/playauto/contacto" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Contacto
+</a> </li> <li> <a href="https://maps.app.goo.gl/X53iLygQ1SqHZy3C9" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Ubicacion
+</a> </li> <li> <a href="/playauto/politica-de-privacidad" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Politica de privacidad
+</a> </li> <li> <a href="/playauto/terminos-y-condiciones" class="
+                text-sm
+                underline-offset-4
+                text-muted-300/60
+                hover:text-white hover:underline
+                dark:text-muted-400 dark:hover:text-muted-100
+              ">
+Terminos y condiciones
+</a> </li> </ul> </div> <div class="lg:w-1/4 md:w-1/2 w-full px-4"> <h2 class="
+            font-sans font-medium
+            text-muted-100
+            tracking-widest
+            text-sm
+            uppercase
+            mb-4
+          ">
+SUBSCRIBITE
+</h2> <div class="
+            flex
+            xl:flex-nowrap
+            md:flex-nowrap
+            lg:flex-wrap
+            flex-wrap
+            justify-center
+            items-end
+            md:justify-start
+          "> <div class="relative w-full flex flex-col gap-2"> <input type="text" placeholder="Ingresa tu email..." class="
+                w-full
+                h-10
+                bg-muted-800/50
+                border border-muted-700
+                text-sm
+                outline-none
+                py-2
+                px-3
+                leading-8
+                placeholder:text-muted-600
+                text-muted-100
+                transition-colors
+                duration-300
+                tw-accessibility
+              "> <button class="
+                w-full
+                h-10
+                flex
+                items-center
+                justify-center
+                font-sans
+                text-sm text-white
+                bg-sky-800
+                border-0
+                py-2
+                px-6
+                focus:outline-none
+                hover:bg-primary-600
+              ">
+Subscribirse
+</button> </div> </div> </div> </div> </div> <div class="text-center p-4 bg-zinc-950"> <p class="text-gray-400">© 2024 Todos los derechos reservados. Desarrollada por <a href="https://bytech.site" class="text-yellow-500">Byte<span class="text-white">ch Paraguay.</span></a></p> </div> <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js" defer></script> </body> </html>

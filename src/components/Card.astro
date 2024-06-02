@@ -20,16 +20,14 @@ const { precio, nombre, d1, d2, d3, img, marca } = Astro.props;
 		  flex
 		  items-center
 		  justify-center
-		  text-gray-500
-		  dark:text-gray-200
+		  text-gray-200
 		">
-		<img src=`https://simpleicons.org/icons/${marca}.svg` alt=`${marca} Icon` class=" dark:filter dark:invert">	  
+		<img src=`https://simpleicons.org/icons/${marca}.svg` alt=`${marca} Icon` class=" filter invert">	  
 	</div>
 	  <div class="leading-tight">
 		<h3 class="
 			font-sans font-semibold
-			text-lg text-gray-800
-			dark:text-gray-50 md:h-14 lg:h-auto
+			text-lg text-gray-50 md:h-14 lg:h-auto
 		  ">
 		  {nombre}
 		</h3>
@@ -40,14 +38,13 @@ const { precio, nombre, d1, d2, d3, img, marca } = Astro.props;
 	  <div class="ml-auto">
 		<span class="
 			font-sans font-semibold
-			text-lg text-gray-800
-			dark:text-gray-50
+			text-lg text-gray-50
 		  ">
 		  ${precio}
 		</span>
 	  </div>
 	</div>
-	<div class="relative lg:h-48 p-4 bg-gray-100 dark:bg-gray-800/80 group-hover:bg-sky-900 transition-colors duration-300">
+	<div class="relative lg:h-48 p-4 bg-gray-800/80 group-hover:bg-sky-900 transition-colors duration-300">
 	  <img class="h-auto w-full" src=`/playauto/images/${img}` alt="Vehicle image">
 	</div>
 	<div class="
@@ -55,16 +52,14 @@ const { precio, nombre, d1, d2, d3, img, marca } = Astro.props;
 		flex
 		mt-6
 		mb-4
-		divide-x divide-gray-200
-		dark:divide-gray-800 sm:h-14
+		divide-x divide-gray-800 sm:h-14
 	  ">
 	  <div class="flex-1 flex items-center justify-center px-4">
 		<div class="text-center">
 		  <span class="
 			  block
 			  font-sans font-semibold
-			  text-gray-800
-			  dark:text-gray-50
+			 text-gray-50
 			">
 			{d1}
 			<small class="font-normal text-gray-400">
@@ -81,8 +76,7 @@ const { precio, nombre, d1, d2, d3, img, marca } = Astro.props;
 		  <span class="
 			  block
 			  font-sans font-semibold
-			  text-gray-800
-			  dark:text-gray-50
+			  text-gray-50
 			">
 			{d2}
 			<small class="font-normal text-gray-400">
@@ -99,8 +93,7 @@ const { precio, nombre, d1, d2, d3, img, marca } = Astro.props;
 		  <span class="
 			  block
 			  font-sans font-semibold
-			  text-gray-800
-			  dark:text-gray-50
+			  text-gray-50
 			">
 			{d3}
 			<small class="font-normal text-gray-400">
@@ -113,7 +106,7 @@ const { precio, nombre, d1, d2, d3, img, marca } = Astro.props;
 		</div>
 	  </div>
 	</div>
-	<a href="/playauto/vehiculo.html" class="
+	<a href="/playauto/vehiculo" class="
 		relative
 		font-sans font-normal
 		inline-flex

@@ -136,7 +136,7 @@ const products = [
       const productElement = document.createElement('div');
       productElement.className = 'item space-y-2';
       productElement.innerHTML = `
-        <div class="max-w-xs mx-auto bg-gray-800 shadow-lg rounded-lg overflow-hidden h-full flex flex-col">
+        <div class="mx-auto bg-gray-800 shadow-lg rounded-lg overflow-hidden h-full flex flex-col">
           <img class="w-full h-48 object-cover object-center" src="${product.image_url}" alt="${product.model}">
           <div class="flex-grow flex flex-col justify-between">
             <div class="px-4 py-2">
@@ -174,3 +174,33 @@ const products = [
   
     filtersContainer.addEventListener('change', filterProducts);
     searchInput.addEventListener('input', filterProducts);
+
+    //boton realizar un pedido
+    document.addEventListener('DOMContentLoaded', function () {
+      const openModalBtn = document.getElementById('open-modal-btn');
+      const closeModalBtn = document.getElementById('modal-close-btn');
+      const closeModalBtn2 = document.getElementById('modal-close-btn-2');
+      const modal = document.getElementById('my-modal');
+      const whatsap = document.getElementById('whatsapp-btn');
+      openModalBtn?.addEventListener('click', function() {
+        modal?.classList.remove('hidden');
+        whatsap?.classList.add('hidden');
+      });
+  
+      closeModalBtn?.addEventListener('click', function() {
+        modal?.classList.add('hidden');
+        whatsap?.classList.remove('hidden');
+      });
+  
+      closeModalBtn2?.addEventListener('click', function() {
+        modal?.classList.add('hidden');
+        whatsap?.classList.remove('hidden');
+      });
+  
+      window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+          modal?.classList.add('hidden');
+          whatsap?.classList.remove('hidden');
+        }
+      });
+    });

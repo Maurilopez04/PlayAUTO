@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Playa de autos">
-<section class="w-full py-6 px-4 bg-white dark:bg-gray-900 overflow-hidden">      
+<section class="w-full py-6 px-4 bg-gray-900 overflow-hidden">      
       <nav class="py-4 mb-6 mt-14">
         <div
           class="container px-4 flex flex-col sm:flex-row gap-6 mx-auto items-center justify-center"
@@ -75,7 +75,7 @@ import Layout from '../layouts/Layout.astro';
           class="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 place-content-center my-4"
         ></div>
       </main>
-      <script src="/js/inventario.js" type="module" defer></script>
+      <script src="/playauto/js/inventario.js" type="module" defer></script>
     </div>
   </section>
   <div id="my-modal" class="fixed inset-0 bg-gray-400 bg-opacity-50 overflow-y-auto h-full w-full hidden z-40">
@@ -115,34 +115,5 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </div>
   
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const openModalBtn = document.getElementById('open-modal-btn');
-      const closeModalBtn = document.getElementById('modal-close-btn');
-      const closeModalBtn2 = document.getElementById('modal-close-btn-2');
-      const modal = document.getElementById('my-modal');
-      const whatsap = document.getElementById('whatsapp-btn');
-      openModalBtn?.addEventListener('click', function() {
-        modal?.classList.remove('hidden');
-        whatsap?.classList.add('hidden');
-      });
-  
-      closeModalBtn?.addEventListener('click', function() {
-        modal?.classList.add('hidden');
-        whatsap?.classList.remove('hidden');
-      });
-  
-      closeModalBtn2?.addEventListener('click', function() {
-        modal?.classList.add('hidden');
-        whatsap?.classList.remove('hidden');
-      });
-  
-      window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-          modal?.classList.add('hidden');
-          whatsap?.classList.remove('hidden');
-        }
-      });
-    });
-  </script>
+
 </Layout>
