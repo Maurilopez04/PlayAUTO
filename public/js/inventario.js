@@ -141,7 +141,7 @@ const products = [
           <div class="flex-grow flex flex-col justify-between">
             <div class="px-4 py-2">
               <h2 class="text-gray-100 text-lg font-semibold">${product.model}</h2>
-              <a href="/vehiculo" style="color:  rgb(6 182 212);">Ver detalles </a>
+              <a href="/playauto/vehiculo" style="color:  rgb(6 182 212);">Ver detalles </a>
             </div>
             <div class="mt-auto px-5 pb-2">
               <p class="text-gray-400">${product.base_msrp}</p>
